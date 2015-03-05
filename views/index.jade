@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.container
+		h1 Hello Boulder!
+
+		form#demo-form.data-parsley-validate
+			.form-group
+				input.form-control(type="text", name="name", placeholder="Name..." , required)
+			.form-group
+				input.form-control(type="email", name="email", placeholder="Email...", data-parsley-trigger="change", required)
+			.form-group
+				textarea.form-control(name="message" , placeholder="Enter a message" data-parsley-trigger="keyup", data-parsley-minlength="20" , data-parsley-maxlength="100" , data-parsley-validation-threshold="10", data-parsley-minlength-message = "Come on! You need to enter at least a 20 caracters long comment..")
+			.form-group#submit-btn
+				input.form-control(type="submit")
+
